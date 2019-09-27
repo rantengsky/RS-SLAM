@@ -1,0 +1,15 @@
+# Camera intrinsic matrix parameters (OpenCV)
+camera:
+  fx: 524.753441
+  fy: 523.943373
+  cx: 319.154910
+  cy: 256.500239
+
+  width: 640
+  height: 480
+
+semantic_pcl:
+  color_image_topic: "/camera/rgb/image_color"
+  depth_image_topic: "/camera/depth/image"
+  dataset: "sunrgbd" # sunrgbd
+  model_path: "/home/ran/catkin_ws/src/semantic_slam/models/pspnet_sunrgbd_best_model180625_5k.pth"
