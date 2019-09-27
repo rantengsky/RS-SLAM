@@ -1,9 +1,9 @@
 # RS-SLAM
 **Authors:** T. Ran, L. Yuan, D. Tang 
-This is a semantic SLAM system that is robust in dyanmic environments.
-<img src="https://github.com/rantengsky/RS-SLAM/blob/master/semantic_slam/pics/introduction-a.png" width="375">
-<img src="https://github.com/rantengsky/RS-SLAM/blob/master/semantic_slam/pics/introduction-b.png" width="375">
-<img src="https://github.com/rantengsky/RS-SLAM/blob/master/semantic_slam/pics/introduction-c.png" width="375">
+<br />This is a semantic SLAM system that is robust in dyanmic environments.
+<br /><img src="https://github.com/rantengsky/RS-SLAM/blob/master/semantic_slam/pics/introduction-a.png" width="375">
+<br /><img src="https://github.com/rantengsky/RS-SLAM/blob/master/semantic_slam/pics/introduction-b.png" width="375">
+<br /><img src="https://github.com/rantengsky/RS-SLAM/blob/master/semantic_slam/pics/introduction-c.png" width="375">
 1. This project is built on ORB-SLAM2, so the Thirdparty and Vocabulary in ORB-SLAM2 should be copyed into rs-slam/. Then compiling the DBoW2 and g2o and uncompressing the ORBvoc.
 2. Putting the whole project into the ROS workspace and running catkin_make to compile it. The RGBD node as well as a semantic_cloud node will be generated.   
 2. Download the segmentation model in 
