@@ -13,7 +13,7 @@ and put them in semantic_slam/models/.
 3. Running a .bag file in TUM3 database to publish rgb and depth images or the openni driver if you have a RGB-D camera.
 ## Dependencies
 1. Pytorch 0.4.0 is required for semantic segmentation.
-2. Ocotomap is required for map construction.
+2. Octomap is required for map construction.
 ## Acknowledgement
 This work cannot be done without many open source projets. Special thanks to
 <br />[semantic_slam](https://github.com/floatlazer/semantic_slam)
