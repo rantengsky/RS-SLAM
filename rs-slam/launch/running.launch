@@ -1,0 +1,16 @@
+<launch>
+
+<!-- Start rs_slam System -->
+<!--<node pkg="rs_slam" type="rgbd_node" name="rgbd_node" output="screen">
+	<param name="path_to_vocabulary" value="$(find rs_slam)/Vocabulary/ORBvoc.txt" />
+	<param name="path_to_settings" value="$(find rs_slam)/config/running.yaml" />
+</node>-->
+
+<node pkg="rs_slam" type="rgbd_node" name="rgbd_node" output="screen" cwd="node" args="$(find rs_slam)/Vocabulary/ORBvoc.txt $(find rs_slam)/config/running.yaml"/> 
+
+<!-- Open Rviz -->
+<node pkg="rviz" type="rviz" name="rviz" output="screen"
+	args="-d $(find rs_slam)/config/rviz/default.rviz" required="true">
+</node>
+
+</launch>
