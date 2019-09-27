@@ -1,0 +1,72 @@
+cmake_minimum_required(VERSION 3.12)
+project(semantic_slam)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(semantic_cloud/include)
+
+add_executable(semantic_slam
+        models/pspnet_50_ade20k.pth
+        models/pspnet_sunrgbd_best_model180625_5k.pth
+        semantic_cloud/include/color_pcl_generator/__init__.py
+        semantic_cloud/include/color_pcl_generator/color_pcl_generator.py
+        semantic_cloud/include/ptsemseg/loader/__init__.py
+        semantic_cloud/include/ptsemseg/loader/ade20k_loader.py
+        semantic_cloud/include/ptsemseg/loader/camvid_loader.py
+        semantic_cloud/include/ptsemseg/loader/cityscapes_loader.py
+        semantic_cloud/include/ptsemseg/loader/mit_sceneparsing_benchmark_loader.py
+        semantic_cloud/include/ptsemseg/loader/nyuv2_loader.py
+        semantic_cloud/include/ptsemseg/loader/pascal_voc_loader.py
+        semantic_cloud/include/ptsemseg/loader/sunrgbd_loader.py
+        semantic_cloud/include/ptsemseg/models/__init__.py
+        semantic_cloud/include/ptsemseg/models/fcn.py
+        semantic_cloud/include/ptsemseg/models/frrn.py
+        semantic_cloud/include/ptsemseg/models/icnet.py
+        semantic_cloud/include/ptsemseg/models/linknet.py
+        semantic_cloud/include/ptsemseg/models/models.py
+        semantic_cloud/include/ptsemseg/models/pspnet.py
+        semantic_cloud/include/ptsemseg/models/refinenet.py
+        semantic_cloud/include/ptsemseg/models/segnet.py
+        semantic_cloud/include/ptsemseg/models/unet.py
+        semantic_cloud/include/ptsemseg/models/utils.py
+        semantic_cloud/include/ptsemseg/__init__.py
+        semantic_cloud/include/ptsemseg/augmentations.py
+        semantic_cloud/include/ptsemseg/caffe.proto
+        semantic_cloud/include/ptsemseg/caffe_pb2.py
+        semantic_cloud/include/ptsemseg/loss.py
+        semantic_cloud/include/ptsemseg/metrics.py
+        semantic_cloud/include/ptsemseg/utils.py
+        semantic_cloud/misc/ade20k_labels.png
+        semantic_cloud/misc/eval_train.py
+        semantic_cloud/misc/pascalVOC_lables.png
+        semantic_cloud/misc/semantic_label.py
+        semantic_cloud/misc/split_train_test.py
+        semantic_cloud/misc/sunrgbd_labels.png
+        semantic_cloud/misc/test_freeze.py
+        semantic_cloud/pcl_test/color_image.png
+        semantic_cloud/pcl_test/depth_image.png
+        semantic_cloud/pcl_test/depth_image.tiff
+        semantic_cloud/pcl_test/octomap_color_data.txt
+        semantic_cloud/pcl_test/ros_pcl_test.py
+        semantic_cloud/pcl_test/semantic_fusion_test.py
+        semantic_cloud/pcl_test/semantic_fusion_test.rviz
+        semantic_cloud/src/semantic_cloud.py
+        semantic_cloud/train_cnn/config.json
+        semantic_cloud/train_cnn/test.py
+        semantic_cloud/train_cnn/train.py
+        semantic_cloud/train_cnn/train.sh
+        semantic_cloud/CMakeLists.txt
+        semantic_cloud/package.xml
+        semantic_cloud/setup.py
+        semantic_slam/launch/camera.launch
+        semantic_slam/launch/octomap_generator.launch
+        semantic_slam/launch/semantic_cloud.launch
+        semantic_slam/launch/semantic_mapping.launch
+        semantic_slam/launch/slam.launch
+        semantic_slam/params/octomap_generator.yaml
+        semantic_slam/params/semantic_cloud.yaml
+        semantic_slam/params/xtion.yaml
+        semantic_slam/CMakeLists.txt
+        semantic_slam/package.xml
+        semantic_slam/semantic_mapping.rviz
+       )
