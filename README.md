@@ -1,10 +1,9 @@
 # RS-SLAM
 This is a semantic SLAM system that is robust in dyanmic environments.
 
-1. Compiling the RS_SLAM in a workspace such as /catkin_ws, and get a RGBD node as well as semantic_cloud node.   
+1. Compiling the RS_SLAM in a workspace such as /catkin_ws, and get a RGBD node as well as a semantic_cloud node.   
 2. Putting the semantic_slam in ROS workspace, then use roslaunch to launch the semantic segmentation node.
 Download the model in 
-[model trained on ade20k](https://drive.google.com/file/d/1u_BEWdVIYiDnpVmAxwME1z3rnWWkjxm5/view?usp=sharing) /
 [model trained on sunrgbd](https://drive.google.com/file/d/1t26t2VHNOzmjH-0lDTdYzXBACOV_4-eL/view?usp=sharing) /
 and put them in models.
 3. Runing the two ROS node to subscibe the image tpoic.
